@@ -15,7 +15,7 @@ app.use('/api', apiRoutes);
 
 app.listen(ServerConfig.PORT, async() => {
     console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`);
-    const {City,Airport} = require('./models');
+    // const {City,Airport} = require('./models');
     // await City.destroy({
     //     where:{
     //         id:4

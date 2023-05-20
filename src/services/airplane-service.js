@@ -1,6 +1,7 @@
 const { StatusCodes } = require('http-status-codes');
 const {AirplaneRepository} = require('../repositories');
 const AppError = require('../utils/errors/app-error');
+const { Console } = require('console');
 
 const airplaneRepository = new AirplaneRepository();
 
@@ -10,6 +11,7 @@ async function createAirplane(data) {
         return airplane;
      }
      catch(error){
+      Console.log('working');
       if(error.name == 'SequelizeValidationError'){
          let explaination = [];
          error.errors.forEach((err) => {

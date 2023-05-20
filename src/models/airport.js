@@ -38,6 +38,8 @@ module.exports = (sequelize, DataTypes) => {
     address: {
       type: DataTypes.STRING,
       unique: true,
+      allowNull:true,
+      // defaultValue:'abc'
     },
     cityId: {
       type: DataTypes.INTEGER,
