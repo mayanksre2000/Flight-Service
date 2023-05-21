@@ -36,7 +36,7 @@ async function getAllFlights(query) {
     }
     if(query.price) {
         [minPrice, maxPrice] = query.price.split("-");
-        customFilter.price = {
+        customFilter.price = {   // op is used to specify operatot stating price should be in between
             [Op.between]: [minPrice, ((maxPrice == undefined) ? 20000: maxPrice)]
         }
     }
