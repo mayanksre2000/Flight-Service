@@ -30,6 +30,7 @@ class CrudRepository{
         if (!response){
             throw new AppError('not Able to find resource or plane',StatusCodes.NOT_FOUND);
         }
+        console.log('hey' + response);
         return response;
         
     }
