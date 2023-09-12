@@ -4,7 +4,7 @@ const {ErrorResponse,SuccessResponse} = require('../utils/common');
 
 /**
  * POST : /cities
- * req-body { name:London}
+ * req-body : { name:London}
  */
 async function createCity(req,res) {
 
