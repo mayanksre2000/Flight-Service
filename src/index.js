@@ -2,9 +2,6 @@ const express = require('express');
 
 const { ServerConfig } = require('./config');
 const apiRoutes = require('./routes');
-
-
-
 const app = express();
 
 
@@ -12,7 +9,11 @@ app.use(express.json()); // its very imp. as from this only we are able to take 
 app.use(express.urlencoded({extended:true}));
 
 app.use('/api', apiRoutes);
+// app.use('/flightsService/api', apiRoutes); // for api gateway
 
+// app.get('/flightsService/home',(req,res) => {
+//     return res.json({msg:'ok'})
+// });
 app.listen(ServerConfig.PORT, async() => {
     console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`);
     // const {City,Airport} = require('./models');
@@ -23,7 +24,7 @@ app.listen(ServerConfig.PORT, async() => {
     // });
     // const city = await City.findByPk(4);
     // await city.createAirport({name:'Indore Airport',code:'IND'}); 
-    //------the above commneted lines work
+    //------the above commneted lines work  
     
 
 
